@@ -58,7 +58,10 @@ Tek bir istemin tek sonucu anekdottur. Minimum protokol:
 1. Canlı arama sonucuna bak: rakip başlıklar ne söylüyor, yapay zekâ özeti var mı? (Özet varsa düşük TO normal olabilir.)
 2. Sayfada gerçekten olan bir ayrıntıyla 3 başlık adayı yaz (`kurallar/baslik-kancalari.md`), birini seç.
 3. **Tek seferde tek sayfa** değiştir; benzer ama değiştirmediğin sayfaları kontrol grubu olarak izle.
-4. 2-4 hafta sonra tıklama ve TO'yu karşılaştır.
+4. Değişikliği deftere yaz: `node araclar/baslik-testi.mjs baslat <url> --eski "..." --yeni "..." --tur <kanca türü> --once <sayfanın sorgu CSV'si> [--kontrol <url> --kontrol-once <csv>]`.
+5. En az 14 gün sonra aynı uzunlukta dönemi dışa aktar ve ölç: `baslik-testi.mjs olc <url> --sonra <csv> [--kontrol-sonra <csv>]`. Araç yalnız iki dönemde de görünen ve konumu ±1,5 içinde kalan sorguları karşılaştırır (konum değiştiyse fark başlıktan gelmeyebilir), kontrol sayfasındaki değişimi düşer ve KAZANDI / KAYBETTİ / BELİRSİZ / YETERSİZ VERİ / ERKEN der. Kaybettiyse eski başlığa dön.
+6. "Birinci sayfada gösterilip hiç tıklanmayan sorgular" listesi bir sonraki adayın hedefidir: o aramaların sorusunu sayfada karşılıyorsan başlıkta söyle.
+7. Birkaç test bitince `baslik-testi.mjs ders` kanca türüne, sayı/soru içermesine ve uzunluk değişimine göre özet verir. 5 testten az grup hipotezdir; sonuç yalnız kendi sitende geçerlidir.
 
 Tıklama oranının sıralamayı ne kadar etkilediği tartışmalıdır; bu testin amacı sıralama değil, aynı gösterimden daha çok tıklama almaktır. Reklamla başlık denemesi ya da tıklama yaptırma gibi yöntemler kullanılmaz.
 

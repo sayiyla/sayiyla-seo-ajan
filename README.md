@@ -36,6 +36,7 @@ Eski sürümlerde iki adım: `/plugin marketplace add sayiyla/sayiyla-seo-ajan`,
 | `bot-log.mjs` | Sunucu günlüğünden bot ziyaretleri; IP listesiyle doğrulama (User-Agent tek başına kanıt değildir). |
 | `ham-html.mjs` | JavaScript'siz ham HTML'i farklı bot adlarıyla çekip karşılaştırır (içerik ham HTML'de mi, bot engeli var mı). |
 | `gsc.mjs` | Search Console CSV analizi: şüpheli tıklama sıçraması, "vurma mesafesi", uzun sorgular, içerik çürümesi, düşük tıklama oranı (başlık testi adayları) ve bir sayfanın **boşluk analizi** (gösterim alıp sayfada geçmeyen sorgular, konum 10-30). |
+| `baslik-testi.mjs` | **Başlık testi defteri:** değiştirilen başlığın tıklama oranını önce/sonra ölçer (yalnız konumu değişmeyen sorgular, kontrol sayfasıyla genel dalga ayrılır), birinci sayfada gösterilip hiç tıklanmayan sorguları listeler, biten testlerden hangi kanca türünün işe yaradığını özetler. |
 | `gorunurluk.mjs` | Yapay zekâ görünürlük ölçümü: aynı soruları web aramalı modellere (OpenAI, Gemini, OpenRouter; anahtar isteğe bağlı) birkaç kez sorar, marka anılmasını, sitenin kaynak gösterilmesini ve rakip alan adlarını motor motor sayar. Çevrimdışı analiz modu var. API çağrıları belgelere göre yazıldı, canlı denenmedi. |
 | `ajan-tara.mjs` | Ajan ve skill dosyalarını güvenlik açısından tarar (uzak betik, talimat ezme, gizli karakter, kimlik bilgisi). |
 | `tazelik.mjs` | Kurallar dosyalarının "son gözden geçirme" yaşını denetler. |
@@ -101,6 +102,8 @@ node araclar/bot-log.mjs erisim.log --ip-listesi botlar-ip.txt
 node araclar/ham-html.mjs https://ornek.com/sayfa/
 node araclar/gsc.mjs yakin sorgular.csv        # anomali | yakin | uzun-sorgu | dusuk-to | cozulme
 node araclar/gsc.mjs bosluk sayfa-sorgulari.csv yazilar/ornek.md   # sayfaya ne eklenmeli
+node araclar/baslik-testi.mjs baslat https://ornek.com/a/ --eski "..." --yeni "..." --tur fark --once a-once.csv
+node araclar/baslik-testi.mjs olc https://ornek.com/a/ --sonra a-sonra.csv   # 14. günden sonra; durum | ders
 node araclar/kontrol.mjs sosyal youtube aciklama.txt --baslik "..." --kapak-yazisi "Günde 3 fincan mı?"
 node araclar/ajan-tara.mjs .claude             # dışarıdan aldığın ajanı kullanmadan önce
 node araclar/gorunurluk.mjs analiz --girdi sonuc.jsonl --alan ornek.com --marka "Örnek"

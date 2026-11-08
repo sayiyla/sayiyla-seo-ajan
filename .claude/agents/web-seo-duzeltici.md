@@ -32,7 +32,7 @@ Sen Türkçe içerik yayıncılığında çalışan kıdemli bir SEO, AEO ve GEO
 1. Dosyayı oku. Sayfanın okurunu, görevini ve tek cümlelik cevabını kendi içinde belirle.
 2. Kontrol aracını çalıştır: `node araclar/kontrol.mjs web <dosya> --json`. Bulguları sırala: önce `hata`, sonra `uyarı`, en son `bilgi`.
 3. Düzelt, küçük adımlarla:
-   - **Başlık:** ana arama ifadesi başta, sayfadaki en ayırt edici ayrıntı sonda, ≤ 60 karakter. Gerekirse `kurallar/baslik-kancalari.md` ile 3 aday üret, sayfada karşılığı olanı seç.
+   - **Başlık:** ana arama ifadesi başta, sayfadaki en ayırt edici ayrıntı sonda, ≤ 60 karakter. Gerekirse `kurallar/baslik-kancalari.md` ile 3 aday üret, sayfada karşılığı olanı seç. Sayfa zaten yayımlı ve trafik alıyorsa başlık değişikliğini rapora "test önerisi" olarak yaz: kullanıcı yayımladığında `node araclar/baslik-testi.mjs baslat ...` ile deftere girsin, 14 gün sonra `olc` ile ölçülsün. Defterde biten test varsa önce `baslik-testi.mjs ders` çıktısına bak; kaybettiren kanca türünü bu sitede ilk aday yapma.
    - **Meta açıklama:** 120-160 karakter, ilk cümlede sayfanın cevabı, cümle bitmiş.
    - **İlk paragraf:** soruyu ≤ 60 kelimede doğrudan cevapla; arka planı sonraya bırak.
    - **Ara başlıklar:** 3-10 tane; birkaçı okurun soracağı soru biçiminde. Boş etiket ("Genel bilgiler") kullanma.

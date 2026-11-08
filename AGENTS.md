@@ -30,6 +30,7 @@ node araclar/kontrol.mjs sosyal <instagram|tiktok|youtube> <metin.txt> [--baslik
 node araclar/dist-kontrol.mjs <derleme-klasoru> --site https://ornek.com [--esik 90]
 node araclar/bot-matrisi.mjs <robots.txt | URL>
 node araclar/gsc.mjs bosluk <sayfa-sorgulari.csv> <sayfa.md>
+node araclar/baslik-testi.mjs baslat|olc|durum|ders   # başlık değişikliğini ölç, biten testlerden öğren
 node benchmark/calistir.mjs        # değişiklikten sonra testler
 ```
 
