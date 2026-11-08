@@ -1,0 +1,34 @@
+{
+  "name": "sayiyla-seo-ajan",
+  "version": "0.2.0",
+  "description": "Claude Code ajanları: web siteleri için SEO, AEO ve GEO metin düzeltici; Instagram, TikTok ve YouTube için SEO açıklaması yazıcı. Bağımlılıksız kontrol aracı dahil.",
+  "type": "module",
+  "license": "MIT AND CC-BY-4.0",
+  "bin": {
+    "seo-kontrol": "araclar/kontrol.mjs"
+  },
+  "scripts": {
+    "kontrol:web": "node araclar/kontrol.mjs web",
+    "kontrol:sosyal": "node araclar/kontrol.mjs sosyal",
+    "ornek": "node araclar/kontrol.mjs web ornekler/sonra-yazi.md && node araclar/kontrol.mjs sosyal instagram ornekler/sonra-instagram.txt",
+    "benchmark": "node benchmark/calistir.mjs",
+    "tazelik": "node araclar/tazelik.mjs",
+    "bot": "node araclar/bot-matrisi.mjs",
+    "kontrol:dist": "node araclar/dist-kontrol.mjs",
+    "test": "node benchmark/calistir.mjs && node araclar/tazelik.mjs --gun 120 && node araclar/ajan-tara.mjs .claude && node araclar/ajan-tara.mjs agents && node araclar/eklenti-uret.mjs --denetle",
+    "ajan-tara": "node araclar/ajan-tara.mjs .claude",
+    "gsc": "node araclar/gsc.mjs",
+    "bot-log": "node araclar/bot-log.mjs",
+    "ham-html": "node araclar/ham-html.mjs",
+    "gorunurluk": "node araclar/gorunurluk.mjs",
+    "eklenti": "node araclar/eklenti-uret.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://sayiyla.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sayiyla/sayiyla-seo-ajan.git"
+  }
+}

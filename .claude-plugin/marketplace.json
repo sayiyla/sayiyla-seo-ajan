@@ -1,0 +1,12 @@
+{
+  "name": "sayiyla",
+  "description": "Sayıyla'nın Claude Code eklentileri: SEO, AEO ve GEO metin düzeltici, sosyal medya açıklaması ve site denetimi.",
+  "owner": { "name": "Sayıyla", "url": "https://sayiyla.com" },
+  "plugins": [
+    {
+      "name": "sayiyla-seo-ajan",
+      "source": "./",
+      "description": "Web sayfası SEO/AEO/GEO düzeltici, Instagram-TikTok-YouTube açıklama yazıcı ve salt okur site denetçisi; bağımsız Node araçlarıyla."
+    }
+  ]
+}

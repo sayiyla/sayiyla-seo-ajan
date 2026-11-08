@@ -1,0 +1,21 @@
+# Kendi sitene kopyala: .github/workflows/seo-kontrol.yml
+# Derleme çıktısını yayından önce SEO / AEO / GEO kapısından geçirir; eşiğin altında kalırsa iş başarısız olur ve dağıtım durur.
+name: SEO kapısı
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci && npm run build            # sitenin kendi derleme komutu; çıktı klasörü dist/ varsayıldı
+      - name: Ajan reposunu al
+        run: git clone --depth 1 https://github.com/sayiyla/sayiyla-seo-ajan.git "$RUNNER_TEMP/seo-ajan"
+      - name: Yayın kapısı
+        run: node "$RUNNER_TEMP/seo-ajan/araclar/dist-kontrol.mjs" dist --site https://ornek.com --esik 90
+      - name: Yapay zekâ botu erişimi (bilgi)
+        run: node "$RUNNER_TEMP/seo-ajan/araclar/bot-matrisi.mjs" dist/robots.txt || true

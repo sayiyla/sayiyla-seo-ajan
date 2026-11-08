@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Bu yazılımı ya da kurallarını kullanırsan lütfen aşağıdaki gibi atıf yap. / If you use this software or its rules, please cite it as below."
+title: "sayiyla-seo-ajan: SEO, AEO ve GEO metin düzeltici ve sosyal açıklama ajanları"
+type: software
+authors:
+  - name: "Sayıyla"
+    website: "https://sayiyla.com"
+repository-code: "https://github.com/sayiyla/sayiyla-seo-ajan"
+url: "https://sayiyla.com"
+license: MIT
+version: "0.2.0"
+date-released: "2026-11-08"
+keywords:
+  - seo
+  - geo
+  - aeo
+  - generative-engine-optimization
+  - claude-code
+  - turkish
+  - youtube-seo
+  - instagram-seo
