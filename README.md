@@ -50,13 +50,16 @@ Eski sürümlerde iki adım: `/plugin marketplace add sayiyla/sayiyla-seo-ajan`,
 
 ## Hangi metriklere bakıyor?
 
+![sayiyla-seo-ajan hangi metriklere bakıyor: web sayfası, sosyal açıklama, derlenmiş site, robots ve botlar, Search Console, başlık testi](docs/gorseller/metrikler.png)
+
 Araçlar **kural uyumuna** bakar; trafik ya da sıralama ölçmez ve vaat etmez.
 
 - **Web sayfası:** başlık 15-60 karakter ve tahmini ~580 px (hedef 50-60 karakter), meta açıklama 120-160, tek H1, 3-10 H2, soru biçimli başlık oranı, ilk paragraf ≤ 60 kelime, ortalama cümle 8-22 kelime (hedef 10-18), 30+ kelimelik cümleler, **Ateşman okunabilirlik** (Türkçe; 50 altı uyarı), Türkçe ton izi (`-mektedir` yoğunluğu, art arda aynı cümle başı, klişe), SSS 3-8, Kısaca, kaynak listesi, kaynaksız sayı yoğunluğu, abartı sözcükleri, ana ifade (başlıkta, açıklamada, ilk paragrafta, yığma yok), HTML'de JSON-LD, kanonik, alt metin.
 - **Sosyal açıklama:** karakter sınırı (Instagram/TikTok 2200, YouTube 4900), etiket sayısı (IG/TikTok ≤ 5 hata, YouTube ≤ 3 uyarı; YouTube 60+ hata), ilk satır ≤ 125 karakter ve etiketle başlamaz, YouTube başlığı ≤ 100, YouTube bölümleri (00:00, ≥ 3 damga, artan, ≥ 10 sn), ana ifade, açıklamadaki sayı ve özel adlar videoda geçiyor mu, gizli karakter, abartı ve ünlem.
 - **Derlenmiş site:** her sayfada temel etiketler, OG, JSON-LD geçerliliği, kırık iç bağlantı, yinelenen başlık/açıklama, öksüz ve zayıf bağlantılı sayfalar, sitemap `lastmod`, llms.txt bağlantıları, 404, Markdown ikizi.
 - **Robots ve botlar:** 22 bot ve jetonun izinli/engelli durumu; sunucu günlüğünde bot isteği ve doğrulanma oranı; ham HTML'de içerik var mı.
-- **Search Console CSV:** konum > 10 ve TO ≥ %40 satırlar (şüpheli), konum 4-20 yüksek gösterimli sorgular, uzun sorgular, gösterim sabit ama tıklama düşen sayfalar.
+- **Search Console CSV:** konum > 10 ve TO ≥ %40 satırlar (şüpheli), konum 4-20 yüksek gösterimli sorgular, uzun sorgular, düşük tıklama oranlı sayfalar, gösterim sabit ama tıklama düşen sayfalar, gösterim alıp sayfada geçmeyen sorgular.
+- **Başlık testi:** konumu değişmeyen sorgularda önce/sonra tıklama oranı, kontrol sayfasına göre düzeltilmiş fark, birinci sayfada gösterilip tıklanmayan sorgular, kanca türüne göre biten testlerin özeti.
 - **Puan:** 100 − 20/hata − 5/uyarı − 1/bilgi. Site puanı sayfa puanlarının ortalamasıdır.
 
 ## Nasıl çalışır?
