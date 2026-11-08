@@ -137,6 +137,8 @@ Bulunamayan alanlar (≥ 20 yıldız ve güncel): hreflang doğrulayıcı, bağ�
 | @buildwithsid / @margatix: tam eşleşen alan adıyla 10 günde 1. sıra | Tek anekdot, riskli. | Kanıt defteri |
 | @arthuryuzbashev: TO %1,1, konum 17 → 13 | Soru; tavsiye içermiyor. `dusuk-to` ve `yakin` tam bu durum için. | - |
 | @steveruizok: "uygulamamdaki örtük durum makinelerini bul" | Kodlama istemi; SEO ile ilgisi yok. | - |
+| @bakigulai: google/skills (Apache-2.0, ~23,7 bin yıldız) | Google'ın resmî Agent Skills deposu: Cloud, Ads, Analytics, Firebase, Gemini API. SEO ya da Search Console skill'i yok. Biçim olarak bizim eklentiyle aynı (`.claude-plugin`, `SKILL.md`, `references/`). | Not; GA4 verisi gerekirse `google-analytics-data-api-basics` |
+| @hridoyreh: "10 sayfa içi SEO aracı (v2)" ve alıntıladığı "12 anahtar kelime aracı" | Yöntem değil, araç listesi: Search Console, Ahrefs, Semrush, Yoast, Surfer, MarketMuse, Rank Math, SE Ranking, Bing Webmaster Tools, yazarın kendi ürünü (SEO Wins). Ücretsiz ve hesap anahtarsız kullanılabilenler yalnız Search Console ve Bing Webmaster (CSV dışa aktarma); diğerleri ücretli ya da WordPress eklentisi. | `gsc.mjs`, `baslik-testi.mjs` (Search Console); Bing CSV desteği gelecek iş |
 
 ---
 
