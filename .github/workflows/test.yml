@@ -1,0 +1,15 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node benchmark/calistir.mjs
+      - run: node araclar/tazelik.mjs --gun 120
+      - run: npm run ornek
+      - run: node araclar/eklenti-uret.mjs --denetle
+      - run: node araclar/ajan-tara.mjs .claude
+      - run: node araclar/ajan-tara.mjs agents
