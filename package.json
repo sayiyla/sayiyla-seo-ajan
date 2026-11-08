@@ -1,6 +1,6 @@
 {
   "name": "sayiyla-seo-ajan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Claude Code ajanları: web siteleri için SEO, AEO ve GEO metin düzeltici; Instagram, TikTok ve YouTube için SEO açıklaması yazıcı. Bağımlılıksız kontrol aracı dahil.",
   "type": "module",
   "license": "MIT AND CC-BY-4.0",

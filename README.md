@@ -14,6 +14,8 @@ Sayıyla'da ([sayiyla.com](https://sayiyla.com)) kullandığımız kuralların b
 
 **Codex ve diğer ajanlar:** repoyu klonla; ajan kökteki [AGENTS.md](AGENTS.md) dosyasını okur ve aynı üç görevi aynı araçlarla yapar.
 
+**Kurulumsuz deneme:** [Web Sitesi Puanlayıcı](https://sayiyla.com/web-sitesi-puanlayici/) (sayiyla.com) bir sayfanın adresini alır, tarayıcıda SEO, AEO ve GEO açısından 100 üzerinden puanlar; eksikleri, düzeltme kodlarını ve her ölçütün dayanağını gösterir. Ücretsizdir, hesap istemez. Bu repodaki araçlar ise aynı işi yerelde ve CI'da yapar: yayından önce metin (`kontrol.mjs`), derlenmiş site (`dist-kontrol.mjs`) ve Search Console verisi (`gsc.mjs`, `baslik-testi.mjs`).
+
 Eski sürümlerde iki adım: `/plugin marketplace add sayiyla/sayiyla-seo-ajan`, sonra `/plugin install sayiyla-seo-ajan@sayiyla`. Ajanlar `sayiyla-seo-ajan:web-seo-duzeltici` gibi adlarla gelir.
 
 ## Ne var?

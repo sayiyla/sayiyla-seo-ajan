@@ -2,7 +2,7 @@
   "name": "sayiyla-seo-ajan",
   "displayName": "Sayıyla SEO Ajanı",
   "description": "Türkçe öncelikli SEO, AEO ve GEO ajanları: web sayfası metnini olgu uydurmadan düzeltir, Instagram/TikTok/YouTube açıklaması yazar, siteyi salt okur denetler. Bağımsız Node araçları ve kanıt etiketli kurallarla.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": { "name": "Sayıyla", "url": "https://sayiyla.com" },
   "homepage": "https://sayiyla.com",
   "repository": "https://github.com/sayiyla/sayiyla-seo-ajan",
